@@ -18,16 +18,13 @@ namespace ProjectMars.Utilities
         public void LoginSteps()
         {
             driver = new ChromeDriver();
-            //Login Page object initialization and definition
-            LoginPage LoginPageObj = new LoginPage();
-            LoginPageObj.LoginSteps(driver);
+            //Home Page object initialization and definition
+            HomePage HomePageObj = new HomePage();
+            HomePageObj.LoginSteps(driver);
 
         }
 
-        [OneTimeTearDown]
-        public void ClosingSteps()
-        {
-            driver.Quit();
-        }
+        
+        
     }
 }
