@@ -19,8 +19,8 @@ namespace ProjectMars.Utilities
         {
             driver = new ChromeDriver();
             //Home Page object initialization and definition
-            HomePage HomePageObj = new HomePage();
-            HomePageObj.LoginSteps(driver);
+            LoginPage loginPageObj = new LoginPage();
+            loginPageObj.LoginSteps(driver);
 
         }
 

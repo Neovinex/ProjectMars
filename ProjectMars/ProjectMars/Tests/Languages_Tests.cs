@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using ProjectMars.Pages;
 using ProjectMars.Utilities;
@@ -19,35 +20,44 @@ namespace ProjectMars.Tests
         {
             driver = new ChromeDriver();
 
-            HomePage HomePageObj = new HomePage();
-            HomePageObj.LoginSteps(driver);
+            LoginPage loginPageObj = new LoginPage();
+            loginPageObj.LoginSteps(driver);
 
-            HomePage HomePAgeObj = new HomePage();
-            HomePageObj.GoToLanguagesPage(driver);
-
-
-
+            //LoginPage loginPageObj = new LoginPage();
+            //loginPageObj.GoToLanguagesPage(driver);
 
         }
+        [Test, Order(1)]
+        public void CreatLanguages()
+        {
+            LanguagesPage languagesPageObj = new LanguagesPage();
+            languagesPageObj.CreatLanguages(driver);
+        }
+
+
 
     }
-
-    
-
-
-    
-        
-        
-        
-        
-    
-    
-    
-
-
-    
-   
-    
-
-
 }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//}
