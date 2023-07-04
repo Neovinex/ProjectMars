@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace ProjectMars.Pages
 {
@@ -26,18 +27,22 @@ namespace ProjectMars.Pages
 
             IWebElement clickAdd = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[3]/input[1]"));
             clickAdd.Click();
+            Thread.Sleep(2000);
 
         }
+    
+        //Get Language
         public string GetLanguage(IWebDriver driver)
         {
             IWebElement newLanguage = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td[1]"));
             return newLanguage.Text;
-
         }
-        public string GetLanguageLevel(IWebDriver driver) 
+        public string GetLanguageLevel(IWebDriver driver)
         {
             IWebElement newLanguageLevel = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td[2]"));
             return newLanguageLevel.Text;
         }
-    }
+        
+        
+    }   
 }

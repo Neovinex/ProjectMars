@@ -34,10 +34,10 @@ namespace ProjectMars.StepDefinitions
             LanguagesPage languagesPageObj = new LanguagesPage();
 
             string newLanguage = languagesPageObj.GetLanguage(driver);
-            string newLanguageLevel = languagesPageObj.GetLanguageLevel(driver);
+            string newLanguageLeve = languagesPageObj.GetLanguageLevel(driver);
 
             Assert.AreEqual("English", newLanguage, "Actual Language and expected Language do not match");
-            Assert.AreEqual("Fluent", newLanguageLevel, "Actual Language level and expected Language level do not match");
+            Assert.AreEqual("Fluent", newLanguageLeve, "Actual Language level and expected Language level do not match");
 
         }
     }

@@ -32,8 +32,8 @@ namespace ProjectMars.Tests
         {
             LanguagesPage languagesPageObj = new LanguagesPage();
             languagesPageObj.CreatLanguages(driver);
-        }
 
+        }
 
 
     }

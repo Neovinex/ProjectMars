@@ -7,3 +7,5 @@ Scenario: [Creat new languages record with valid details]
 	Given [I logged into webportal successfully]
 	When [I create a new language record]
 	Then [The record should be created successfully]
+
+Scenario Outline: 
