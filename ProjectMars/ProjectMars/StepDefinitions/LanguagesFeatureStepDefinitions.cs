@@ -40,5 +40,12 @@ namespace ProjectMars.StepDefinitions
             Assert.AreEqual("Fluent", newLanguageLeve, "Actual Language level and expected Language level do not match");
 
         }
+        [When(@"\[I update existing '([^']*)', '([^']*)', records in profile page]")]
+        public void WhenIUpdateExistingRecordsInProfilePage(string Language, string Level)
+        {
+            LanguagesPage languagesPageObj = new LanguagesPage();
+            languagesPageObj.Editlanguages(driver);
+        }
+
     }
 }

@@ -34,7 +34,12 @@ namespace ProjectMars.Tests
             languagesPageObj.CreatLanguages(driver);
 
         }
-
+        [Test, Order(2)]
+        public void EditLanguages() 
+        {
+            LanguagesPage languagesPageObj = new LanguagesPage();
+            languagesPageObj.Editlanguages(driver);
+        }
 
     }
 }
